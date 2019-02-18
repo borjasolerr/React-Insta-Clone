@@ -31,3 +31,16 @@
     transform: rotate(360deg);
   }
 }
+
+.environment-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.app-container {
+  margin: 20px 0;
+  width: 70%;
+  background-color: white;
+}

@@ -1,0 +1,11 @@
+.postcontainer-container {
+  background-color: white;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.post-container {
+  height: 100px;
+  padding: 10px;
+  background-color: white;
+}

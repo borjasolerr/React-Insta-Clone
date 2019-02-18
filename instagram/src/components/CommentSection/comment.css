@@ -1,3 +1,15 @@
+.commentsection-container {
+  background-color: white;
+}
+
 .comment-box {
-  border: 1px solid black;
+  padding: 10px;
+  border: 0.5px dashed white;
+}
+
+.comment-box input {
+  line-height: 1.5;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
 }

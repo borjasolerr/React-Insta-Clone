@@ -2,5 +2,51 @@
   background-color: white;
   margin: 10px;
   padding: 10px;
-  color: grey;
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchbar-left-container {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchbar-logo-symbol {
+  width: 20%;
+}
+
+.searchbar-logo-name {
+  width: 65%;
+}
+
+.searchbar-middle-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchbar-input {
+  padding: 7px 10px;
+  background-color: #fdfdfa;
+  border: 1px solid #b9b8b7;
+}
+
+.searchbar-input::placeholder {
+  text-align: center;
+  color: #b9b8b7;
+  font-size: 0.8rem;
+}
+
+.searchbar-right-container {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchbar-icon {
+  width: 20%;
 }
