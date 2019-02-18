@@ -13,8 +13,7 @@ export default class App extends Component {
     return (
       <div>
         {this.state.dummyData.map(post => {
-          console.log(post);
-          return <PostContainer post={post} />;
+          return <PostContainer post={post} key={post.timestamp} />;
         })}
       </div>
     );
