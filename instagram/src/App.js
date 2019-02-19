@@ -29,7 +29,7 @@ export default class App extends Component {
         <div className="environment-container">
           <div className="app-container">
             {this.state.dummyData.map(post => {
-              return <PostContainer post={post} key={post.timestamp} comments={post.comments} />;
+              return <PostContainer post={post} key={post.timestamp} comments={post.comments} likes={post.likes} />;
             })}
           </div>
         </div>

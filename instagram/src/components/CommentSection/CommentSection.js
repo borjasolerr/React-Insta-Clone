@@ -9,13 +9,16 @@ export default class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: this.props.comments,
-      inputCommentValue: ""
+      inputCommentValue: "",
+      likes: this.props.likes,
+      liked: false
     };
+    console.log(this.state.liked);
   }
 
   addNewComment = message => {
     this.setState(currState => ({
-      comments: currState.comments.concat({ username: "user", text: message })
+      comments: currState.comments.concat({ username: "test", text: message })
     }));
   };
 
@@ -31,16 +34,29 @@ export default class CommentSection extends React.Component {
     });
   };
 
+  toggleLike = () => {
+    this.setState(
+      currState => ({ liked: !currState.liked }),
+      () => {
+        if (this.state.liked) {
+          this.setState(currState => ({ likes: currState.likes + 1 }));
+        } else if (!this.state.liked) {
+          this.setState(currState => ({ likes: currState.likes - 1 }));
+        }
+      }
+    );
+  };
+
   render() {
     return (
       <div className="commentsection-container">
         <div className="commentsection-icons-likes-container">
           <div className="commentsection-icons-container">
-            <img className="commentsection-icon" src="/assets/instagram-heart.svg" alt="instagram icon" />
+            <img className="commentsection-icon" onClick={() => this.toggleLike()} src="/assets/instagram-heart.svg" alt="instagram icon" />
             <img className="commentsection-icon" src="/assets/instagram-bubble.svg" alt="instagram icon" />
             <img className="commentsection-icon" src="/assets/instagram-save.svg" alt="instagram icon" />
           </div>
-          <div>{this.props.likes} likes</div>
+          <div>{this.state.likes} likes</div>
 
           {this.state.comments.map((comment, idx) => {
             return <Comment comment={comment} key={idx} />;
