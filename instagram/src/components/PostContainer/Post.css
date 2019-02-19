@@ -1,11 +1,34 @@
 .postcontainer-container {
   background-color: white;
-  margin: 10px 0;
-  padding: 10px;
+  margin-bottom: 50px;
 }
 
-.post-container {
-  height: 100px;
-  padding: 10px;
-  background-color: white;
+.post-user-container {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.post-thumbnail {
+  border-radius: 50%;
+  width: 5%;
+  height: 5%;
+  margin-right: 10px;
+}
+
+.post-username {
+  font-weight: 800;
+}
+
+.post-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.post-image {
+  width: 100%;
 }
