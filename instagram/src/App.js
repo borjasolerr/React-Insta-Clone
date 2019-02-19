@@ -7,7 +7,19 @@ import "./App.css";
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { dummyData };
+    this.state = {
+      dummyData: []
+    };
+  }
+
+  getData() {
+    this.setState({
+      dummyData: dummyData
+    });
+  }
+
+  componentDidMount() {
+    this.getData();
   }
 
   render() {
@@ -17,7 +29,7 @@ export default class App extends Component {
         <div className="environment-container">
           <div className="app-container">
             {this.state.dummyData.map(post => {
-              return <PostContainer post={post} key={post.timestamp} />;
+              return <PostContainer post={post} key={post.timestamp} comments={post.comments} />;
             })}
           </div>
         </div>

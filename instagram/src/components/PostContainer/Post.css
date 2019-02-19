@@ -1,6 +1,7 @@
 .postcontainer-container {
   background-color: white;
   margin-bottom: 50px;
+  border: 1px solid #dbdbdb;
 }
 
 .post-user-container {
