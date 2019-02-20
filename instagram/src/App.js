@@ -4,25 +4,17 @@ import Authenticate from "./components/authentication/Authenticate";
 import PostsPage from "./components/PostContainer/PostsPage";
 import "./App.css";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+class Posts extends Component {
   render() {
-    return <PostsPage />;
+    return <PostsPage {...this.props} />;
   }
 }
 
 class Login extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    return <LoginPage />;
+    return <LoginPage {...this.props} />;
   }
 }
 
-const AuthenticatedApp = Authenticate(App, Login);
-export default AuthenticatedApp;
+const App = Authenticate(Posts, Login);
+export default App;
