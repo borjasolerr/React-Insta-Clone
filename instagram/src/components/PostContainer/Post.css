@@ -33,3 +33,9 @@
 .post-image {
   width: 100%;
 }
+
+.timestamp {
+  color: #b9b8b7;
+  font-weight: lighter;
+  padding: 10px 0 0 10px;
+}

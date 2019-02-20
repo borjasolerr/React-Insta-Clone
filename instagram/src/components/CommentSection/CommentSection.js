@@ -52,9 +52,9 @@ export default class CommentSection extends React.Component {
       <div className="commentsection-container">
         <div className="commentsection-icons-likes-container">
           <div className="commentsection-icons-container">
-            <img className="commentsection-icon" onClick={() => this.toggleLike()} src="/assets/instagram-heart.svg" alt="instagram icon" />
-            <img className="commentsection-icon" src="/assets/instagram-bubble.svg" alt="instagram icon" />
-            <img className="commentsection-icon" src="/assets/instagram-save.svg" alt="instagram icon" />
+            <img className="commentsection-icon" onClick={() => this.toggleLike()} className={this.state.liked ? "display-none" : "display-true"} src="/assets/heart-icon.svg" alt="instagram icon" />
+            <img className="commentsection-icon" onClick={() => this.toggleLike()} className={!this.state.liked ? "display-none" : "display-true"} src="/assets/heart-red-icon.svg" alt="instagram icon" />
+            <img className="commentsection-icon bubble" src="/assets/bubble-icon.svg" alt="instagram icon" />
           </div>
           <div>{this.state.likes} likes</div>
 

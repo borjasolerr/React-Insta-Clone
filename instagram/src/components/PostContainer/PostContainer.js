@@ -6,6 +6,7 @@ import "./Post.css";
 export default function PostContainer(props) {
   const post = props.post;
   const comments = post.comments;
+  const timestamp = post.timestamp;
   return (
     <div className="postcontainer-container">
       <div className="post-user-container">
@@ -15,6 +16,7 @@ export default function PostContainer(props) {
       <div className="post-image-container">
         <img className="post-image" src={post.imageUrl} alt="users added" />
       </div>
+      <div className="timestamp">{timestamp}</div>
       <CommentSection comments={comments} likes={post.likes} />
     </div>
   );
