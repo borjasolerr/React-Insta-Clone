@@ -1,0 +1,13 @@
+.environment-container {
+  padding-top: 10px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: #fafafa;
+}
+
+.app-container {
+  margin: 20px 0;
+  width: 50%;
+  background-color: white;
+}

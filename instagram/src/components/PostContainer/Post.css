@@ -35,7 +35,8 @@
 }
 
 .timestamp {
-  color: #b9b8b7;
+  color: #c9c9c9;
   font-weight: lighter;
   padding: 10px 0 0 10px;
+  font-size: 0.8rem;
 }
