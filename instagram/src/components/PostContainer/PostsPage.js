@@ -9,7 +9,8 @@ export default class PostsPage extends Component {
     super(props);
     this.state = {
       dummyData: [],
-      searchValue: ""
+      searchValue: "",
+      username: this.props.username
     };
   }
 
@@ -17,6 +18,9 @@ export default class PostsPage extends Component {
     this.setState({
       dummyData: dummyData
     });
+    localStorage.setItem("dummyData", JSON.stringify(dummyData));
+    localStorage.setItem("searchValue", "");
+    localStorage.setItem("username", JSON.stringify(this.state.username));
   }
 
   handleSearch = input => {
@@ -37,7 +41,7 @@ export default class PostsPage extends Component {
               if (post.username.indexOf(this.state.searchValue) === -1) {
                 return null;
               }
-              return <PostContainer post={post} key={post.timestamp} />;
+              return <PostContainer post={post} key={post.timestamp} username={this.props.username} />;
             })}
           </div>
         </div>

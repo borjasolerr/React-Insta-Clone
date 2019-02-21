@@ -24,11 +24,12 @@ export default function PostContainer(props) {
 
 PostContainer.propTypes = {
   post: PropTypes.shape({
-    username: PropTypes.string,
-    thumbnailUrl: PropTypes.string,
-    imageUrl: PropTypes.string,
-    likes: PropTypes.number,
-    timestamp: PropTypes.string,
-    comments: PropTypes.array
-  }).isRequired
+    username: PropTypes.string.isRequired,
+    thumbnailUrl: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    comments: PropTypes.array.isRequired
+  }).isRequired,
+  username: PropTypes.string
 };

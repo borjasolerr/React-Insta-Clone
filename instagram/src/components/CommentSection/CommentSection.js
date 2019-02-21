@@ -13,12 +13,11 @@ export default class CommentSection extends React.Component {
       likes: this.props.likes,
       liked: false
     };
-    console.log(this.state.liked);
   }
 
   addNewComment = message => {
     this.setState(currState => ({
-      comments: currState.comments.concat({ username: "test", text: message })
+      comments: currState.comments.concat({ username: this.props.username, text: message })
     }));
   };
 
@@ -62,7 +61,7 @@ export default class CommentSection extends React.Component {
             return <Comment comment={comment} key={idx} />;
           })}
           <div className="commentsection-new-comment-container">
-            <NewComment addNewComment={this.addNewComment} inputCommentValue={this.state.inputCommentValue} handleAddNewInput={this.handleAddNewInput} clearInput={this.clearInput} />
+            <NewComment addNewComment={this.addNewComment} inputCommentValue={this.state.inputCommentValue} handleAddNewInput={this.handleAddNewInput} clearInput={this.clearInput} />{" "}
           </div>
         </div>
       </div>
@@ -72,5 +71,6 @@ export default class CommentSection extends React.Component {
 
 CommentSection.propTypes = {
   comments: PropTypes.array.isRequired,
-  likes: PropTypes.number.isRequired
+  likes: PropTypes.number.isRequired,
+  username: PropTypes.string
 };
