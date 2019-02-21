@@ -1,0 +1,42 @@
+.postcontainer-container {
+  background-color: white;
+  margin-bottom: 50px;
+  border: 1px solid #dbdbdb;
+}
+
+.post-user-container {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.post-thumbnail {
+  border-radius: 50%;
+  width: 5%;
+  height: 5%;
+  margin-right: 10px;
+}
+
+.post-username {
+  font-weight: 800;
+}
+
+.post-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.timestamp {
+  color: #c9c9c9;
+  font-weight: lighter;
+  padding: 10px 0 0 10px;
+  font-size: 0.8rem;
+}
